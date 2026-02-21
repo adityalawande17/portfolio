@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aditya - Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(2, 2, 59);
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(24, 24, 91);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover {
+        color: lavender;
+      }
+      .left {
+        font-size: 1.5rem;
+      }
+      .firstSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 130px 0;
+      }
+      .firstSection > div {
+        width: 30%;
+      }
+      .leftSection {
+        font-size: 3rem;
+      }
+      .rightSection img {
+        width: 80%;
+      }
+      .rightSection img {
+        transition: transform 0.3s ease;
+      }
+      .rightSection img:hover {
+        transform: scale(1.1);
+      }
+      .purple {
+        color: rgb(119, 76, 158);
+      }
+      .secondSection {
+        max-width: 80vw;
+        margin: auto;
+      }
+      main hr {
+        border: 0;
+        background: lavender;
+        height: 1.2px;
+        margin: 60px 84px;
+      }
+      span {
+        color: rgb(119, 76, 158);
+      }
+      /* PROJECT SECTION */
+
+      .secondSection h1 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+      }
+
+      .projects-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .project-card {
+        background-color: rgb(24, 24, 91);
+        border-radius: 15px;
+        overflow: hidden;
+        width: 300px;
+        transition:
+          transform 0.4s ease,
+          box-shadow 0.4s ease;
+      }
+
+      .project-card:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 25px rgba(119, 76, 158, 0.8);
+      }
+
+      /* IMAGE PART */
+      .project-image {
+        height: 180px;
+        overflow: hidden;
+      }
+
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(4px);
+        transition:
+          filter 0.4s ease,
+          transform 0.4s ease;
+      }
+
+      /* REMOVE BLUR ON HOVER */
+      .project-card:hover img {
+        filter: blur(0);
+        transform: scale(1.1);
+      }
+
+      /* CONTENT PART */
+      .project-content {
+        padding: 20px;
+      }
+
+      .project-content h2 {
+        color: rgb(255, 255, 255);
+        margin-bottom: 10px;
+      }
+
+      .project-content p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+      }
+
+      .project-content a {
+        text-decoration: none;
+        color: lavender;
+      }
+      .github-section {
+        margin: 80px 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .github-bar {
+        width: 80%;
+        background-color: rgb(24, 24, 91);
+        padding: 30px;
+        border-radius: 20px;
+        text-align: center;
+      }
+
+      .github-bar a {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background: white;
+        color: rgb(24, 24, 91);
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .github-bar a:hover {
+        background-color: rgb(213, 213, 226);
+      }
+      .about-section {
+        max-width: 70%;
+        margin: 100px auto;
+        text-align: center;
+      }
+
+      .about-section h1 {
+        margin-bottom: 30px;
+        font-size: 2.5rem;
+      }
+
+      .about-section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+      .achievement-section {
+        max-width: 80%;
+        margin: 100px auto;
+        text-align: center;
+      }
+
+      .achievement-section h1 {
+        margin-bottom: 50px;
+        font-size: 2.5rem;
+      }
+
+      .achievement-card {
+        background-color: rgb(55, 55, 116);
+        padding: 30px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+      }
+
+      .achievement-card:hover {
+        transform: scale(1.03);
+      }
+
+      .achievement-card h2 {
+        color: rgb(255, 255, 255);
+        margin-bottom: 10px;
+      }
+      .connect-section {
+        text-align: center;
+        margin: 100px 0;
+      }
+
+      .connect-section h1 {
+        margin-bottom: 30px;
+      }
+
+      .connect-links {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .connect-links a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: white;
+        transition:
+          transform 0.3s ease,
+          color 0.3s ease;
+      }
+
+      .connect-links a:hover {
+        transform: scale(1.1);
+        color: rgb(119, 76, 158);
+      }
+
+      .connect-links i {
+        font-size: 1.3rem;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: rgb(24, 24, 91);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">.Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="https:/leetcode.com/aditya_lawande">Leetcode</a></li>
+            <li>
+              <a href="https://www.linkedin.com/in/adityalawande17/"
+                >Linkedin</a
+              >
+            </li>
+            <li><a href="https://github.com/adityalawande17">Github</a></li>
+            <li>
+              <a href="https://codolio.com/profile/adityalawande17">Codolio</a>
+            </li>
+            <li><a href="/">Resume</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+          Hi, My name is <span class="purple">Aditya Lawande</span>
+          <div>I'm a passionate</div>
+          <span id="element"></span>
+        </div>
+        <div class="rightSection"><img src="bg2.png" alt="" /></div>
+      </section>
+      <hr />
+      <section class="about-section">
+        <h1>About Me</h1>
+        <p>
+          I am a passionate IT engineering student and Full Stack Developer. I
+          enjoy building scalable web applications using the MERN stack. My goal
+          is to secure a high-paying tech job and keep growing.
+        </p>
+      </section>
+      <hr />
+      <section class="secondSection">
+        <h1>Projects</h1>
+
+        <div class="projects-container">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="studentkart.png" alt="StudentKart" />
+            </div>
+            <div class="project-content">
+              <h2>StudentKart</h2>
+              <p>A full stack student marketplace built using MERN stack.</p>
+              <a href="#">View Project</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="adcon.png" alt="StudentKart" />
+            </div>
+            <div class="project-content">
+              <h2>ADCON Store</h2>
+              <p>An ecommerce website built using MERN stack.</p>
+              <a href="#">View Project</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="convoflow.png" alt="StudentKart" />
+            </div>
+            <div class="project-content">
+              <h2>Convoflow</h2>
+              <p>
+                A full stack question asking site built using NextJs and
+                appwrite.
+              </p>
+              <a href="#">View Project</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="github-section">
+        <div class="github-bar">
+          <h2>Explore My GitHub</h2>
+          <a href="https://github.com/adityalawande17" target="_blank"
+            >Visit GitHub</a
+          >
+        </div>
+      </section>
+      <hr />
+      <section class="achievement-section">
+        <h1>Achievements</h1>
+
+        <div class="achievement-card">
+          <h2>Codolio</h2>
+          <p>Solved over 300+ problems across all coding platforms.</p>
+        </div>
+
+        <div class="achievement-card">
+          <h2>Leetcode</h2>
+          <p>Solved over 200+ problems on Leetcode.</p>
+        </div>
+      </section>
+      <hr />
+      <section class="connect-section">
+        <h1>Let's Connect</h1>
+
+        <div class="connect-links">
+          <a href="mailto:adityalawande17@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            adityalawande1771@gmail.com
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/adityalawande17/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+            LinkedIn
+          </a>
+
+          <a href="https://github.com/adityalawande17" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            GitHub
+          </a>
+        </div>
+      </section>
+      <footer>
+        <p>© 2026 Aditya Lawande</p>
+      </footer>
+    </main>
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Full Stack Developer", "Mern Stack Developer"],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>
