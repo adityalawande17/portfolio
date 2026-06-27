@@ -505,6 +505,51 @@
         font-weight: 700;
       }
 
+      /* EXPERIENCE*/
+
+      .experience-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 3rem;
+      }
+
+      .experience-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 2rem;
+        transition: 0.25s;
+      }
+
+      .experience-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .exp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+      }
+
+      .exp-company {
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      .exp-duration {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      .exp-list {
+        margin-top: 1rem;
+        padding-left: 1rem;
+        color: var(--text-secondary);
+      }
+
       /* ═══════════════════════════════
          SKILLS
       ════════════════════════════════ */
@@ -1091,6 +1136,58 @@
             <div class="avail-card">
               <div class="avail-label">Available for</div>
               <div class="avail-text">Internships &amp; Full-time Roles</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Experience ── -->
+
+    <section id="experience">
+      <div class="container">
+        <div class="chip">Experience</div>
+        <h2 class="section-title">Where I've worked</h2>
+
+        <div class="experience-list">
+          <div class="experience-card">
+            <div class="exp-header">
+              <div>
+                <h3>Software Engineer Intern</h3>
+                <div class="exp-company">Spherical Insights LLP</div>
+              </div>
+
+              <div class="exp-duration">Jun 2026 – Present</div>
+            </div>
+
+            <ul class="exp-list">
+              <li>
+                Developed and enhanced multiple client-facing production web
+                pages using JSP, HTML5, CSS3, Bootstrap, and JavaScript,
+                improving UI consistency across global market research portals.
+              </li>
+              <li>
+                Built a dynamic multi-language report filtering system using
+                Java Servlets, JDBC, and MySQL, enabling real-time
+                database-driven content filtering across 14 languages.
+              </li>
+              <li>
+                Utilized Java, JSP, Servlets, JDBC, and MySQL to develop,
+                maintain, and enhance production web applications in a
+                professional development environment.
+              </li>
+              <li>Using Git and GitHub for version control.</li>
+            </ul>
+
+            <div class="tag-row" style="margin-top: 1rem">
+              <span class="pill">Java</span>
+              <span class="pill">HTML</span>
+              <span class="pill">CSS</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill">JSP</span>
+              <span class="pill">Servlet</span>
+              <span class="pill">JDBC</span>
+              <span class="pill">MySQL</span>
             </div>
           </div>
         </div>
